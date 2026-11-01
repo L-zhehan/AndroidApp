@@ -1,122 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/bg_color"
+    android:padding="20dp"
     android:fitsSystemWindows="true">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_info"
+        android:textColor="@color/text_sub"
+        android:textSize="14sp"
+        android:layout_marginBottom="30dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/bg_card"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:layout_marginBottom="16dp">
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_type"
+            android:textColor="@color/text_main"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/rg_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/my_info"
-            android:textColor="@color/text_sub"
-            android:textSize="14sp"
-            android:layout_marginBottom="30dp"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            <RadioButton
+                android:id="@+id/rb_expense"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="@string/rb_expense"
+                android:textSize="16sp"
+                android:checked="true" />
+            <RadioButton
+                android:id="@+id/rb_income"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="48dp"
+                android:text="@string/rb_income"
+                android:textSize="16sp" />
+        </RadioGroup>
+    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_card"
-            android:orientation="vertical"
-            android:layout_marginBottom="16dp">
+            android:text="@string/label_category"
+            android:textColor="@color/text_main"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_type"
-                android:textColor="@color/text_main"
-                android:textStyle="bold" />
-
-            <RadioGroup
-                android:id="@+id/rg_type"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp">
-                <RadioButton
-                    android:id="@+id/rb_expense"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="48dp"
-                    android:text="@string/rb_expense"
-                    android:textSize="16sp"
-                    android:checked="true" />
-                <RadioButton
-                    android:id="@+id/rb_income"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="48dp"
-                    android:text="@string/rb_income"
-                    android:textSize="16sp" />
-            </RadioGroup>
-        </LinearLayout>
-
-        <!-- 类别卡片 -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_card"
-            android:orientation="vertical"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_category"
-                android:textColor="@color/text_main"
-                android:textStyle="bold" />
-
-            <Spinner
-                android:id="@+id/spinner_category"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginTop="10dp"
-                android:background="@android:drawable/btn_dropdown"
-                android:spinnerMode="dropdown" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/bg_card"
-            android:orientation="vertical"
-            android:layout_marginBottom="30dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/label_amount"
-                android:textColor="@color/text_main"
-                android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/et_amount"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:background="@null"
-                android:inputType="numberDecimal"
-                android:hint="@string/hint_amount"
-                android:textColor="@color/text_main"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                android:autofillHints="none" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_save"
+        <Spinner
+            android:id="@+id/spinner_category"
             android:layout_width="match_parent"
             android:layout_height="56dp"
-            android:background="@drawable/bg_button"
-            android:text="@string/btn_save"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:stateListAnimator="@null"/>
+            android:layout_marginTop="5dp"
+            android:spinnerMode="dropdown"
+            android:popupBackground="@color/white"
+            android:backgroundTint="@color/primary"/>
     </LinearLayout>
-</ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:layout_marginBottom="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_amount"
+            android:textColor="@color/text_main"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_amount"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:inputType="numberDecimal"
+            android:hint="@string/hint_amount"
+            android:textColor="@color/text_main"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:autofillHints="none" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_button"
+        android:text="@string/btn_save"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:stateListAnimator="@null"/>
+</LinearLayout>

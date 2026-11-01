@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
     <color name="primary">#3F51B5</color> <!-- 记账绿 -->
     <color name="bg_color">#F5F7FA</color> <!-- 浅灰背景 -->
     <color name="text_main">#333333</color>
     <color name="text_sub">#888888</color>
-    <color name="expense_color">#FFAFAB</color> <!-- 支出红 -->
-    <color name="income_color">#CFFFD0</color> <!-- 收入绿 -->
+    <color name="expense_color">#801542</color> <!-- 支出红 -->
+    <color name="income_color">#4D613C</color> <!-- 收入绿 -->
 </resources>

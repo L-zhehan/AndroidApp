@@ -15,7 +15,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    // 【核心修改3】用 static 变量在内存中保存记录，退出APP即清空，满足作业要求
     public static List<String> globalRecordList = new ArrayList<>();
 
     @Override
@@ -28,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         EditText etAmount = findViewById(R.id.et_amount);
         Button btnSave = findViewById(R.id.btn_save);
 
-        // 【核心修改2】初始化下拉框，默认是支出的类别
+
         updateSpinner(spinnerCategory, R.array.expense_array);
 
         // 监听单选框切换，动态改变下拉框内容
