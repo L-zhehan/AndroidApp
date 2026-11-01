@@ -8,6 +8,7 @@
         <item>交通</item>
         <item>学习</item>
         <item>社交</item>
+        <item>其他</item>
     </string-array>
 
     <string-array name="income_array">

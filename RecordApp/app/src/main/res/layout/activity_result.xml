@@ -6,7 +6,7 @@
     android:background="@color/bg_color"
     android:fitsSystemWindows="true">
 
-    <!-- 顶部标题栏 -->
+    <!-- 顶部绿色标题栏 -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -22,6 +22,7 @@
             android:textStyle="bold" />
     </RelativeLayout>
 
+    <!-- 静态姓名与学号 (在 strings.xml 里改) -->
     <TextView
         android:id="@+id/tv_info"
         android:layout_width="match_parent"
@@ -31,7 +32,7 @@
         android:textSize="14sp"
         android:padding="16dp" />
 
-    <!-- 提示区域 -->
+    <!-- 最新保存的提示信息 -->
     <TextView
         android:id="@+id/tv_latest"
         android:layout_width="match_parent"
@@ -42,25 +43,59 @@
         android:textSize="16sp"
         android:textStyle="bold"/>
 
-    <!-- ListView 展示所有记录 -->
+    <!-- 总收入与总支出统计面板 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/tv_total_expense"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="总支出：0.00 元"
+            android:textSize="18sp"
+            android:textColor="@color/expense_color"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_total_income"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="总收入：0.00 元"
+            android:textSize="18sp"
+            android:textColor="@color/income_color"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- 账单列表区域：圆角卡片背景，包含所有记录 -->
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_margin="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/bg_card"
         android:divider="#E0E0E0"
-        android:dividerHeight="1dp"/>
+        android:dividerHeight="1dp"
+        android:padding="8dp"
+        android:clipToPadding="false"/>
 
-    <!-- 大号返回按钮 -->
+    <!-- 底部大号返回按钮 -->
     <ImageButton
         android:id="@+id/btn_back"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="20dp"
+        android:layout_height="56dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/bg_button"
         android:src="@android:drawable/ic_menu_revert"
         android:tint="@color/white"
         android:contentDescription="@string/btn_back" />
+
 </LinearLayout>
