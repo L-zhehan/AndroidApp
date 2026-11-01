@@ -1,46 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
+    android:orientation="vertical"
+    android:background="@color/bg_color"
     android:fitsSystemWindows="true">
+
+    <!-- 顶部标题栏 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:paddingHorizontal="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/title_result"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/tv_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/my_info"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"/>
+        android:textColor="@color/text_sub"
+        android:textSize="14sp"
+        android:padding="16dp" />
 
+    <!-- 提示区域 -->
     <TextView
-        android:id="@+id/tv_result"
+        android:id="@+id/tv_latest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/tv_info"
-        android:text="@string/label_result"
-        android:textSize="18sp"
-        android:textColor="#FF0000"
-        android:layout_marginBottom="20dp"/>
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/expense_color"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
 
-    <!-- ListView -->
+    <!-- ListView 展示所有记录 -->
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/tv_result"
-        android:layout_above="@id/btn_back"
-        android:layout_marginBottom="20dp"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_card"
+        android:divider="#E0E0E0"
+        android:dividerHeight="1dp"/>
 
-    <!-- ImageButton -->
+    <!-- 大号返回按钮 -->
     <ImageButton
         android:id="@+id/btn_back"
-        android:layout_width="60dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_button"
         android:src="@android:drawable/ic_menu_revert"
-        android:background="#E0E0E0"
+        android:tint="@color/white"
         android:contentDescription="@string/btn_back" />
-</RelativeLayout>
+</LinearLayout>

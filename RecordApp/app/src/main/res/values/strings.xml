@@ -1,18 +1,19 @@
 <resources>
-    <string name="app_name">个人记账本</string>
+    <string name="app_name">我的记账本</string>
+    <string name="my_info">姓名：刘哲含  学号：2406100116</string>
 
-    <string name="my_info">姓名：刘哲含   学号：2406100116</string>
-
-    <string name="label_type">请选择收支类型：</string>
+    <string name="label_type">收支类型</string>
     <string name="rb_expense">支出</string>
     <string name="rb_income">收入</string>
 
-    <string name="label_category">请选择消费类别：</string>
-    <string name="label_amount">请输入金额：</string>
-    <string name="hint_amount">请输入数字</string>
-    <string name="btn_save">保存并查看记录</string>
+    <string name="label_category">消费/收入类别</string>
+    <string name="label_amount">金额 (元)</string>
+    <string name="hint_amount">0.00</string>
+    <string name="btn_save">保存记录</string>
 
-    <string name="toast_empty">金额不能为空！</string>
-    <string name="label_result">最新记录：</string>
+    <string name="toast_empty">请输入金额</string>
+    <string name="toast_error">输入格式不正确</string>
+
+    <string name="title_result">我的账单</string>
     <string name="btn_back">返回</string>
 </resources>
