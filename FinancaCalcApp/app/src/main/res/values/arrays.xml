@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="years_array">
+        <item>1年 (12个月)</item>
+        <item>3年 (36个月)</item>
+        <item>5年 (60个月)</item>
+    </string-array>
+</resources>

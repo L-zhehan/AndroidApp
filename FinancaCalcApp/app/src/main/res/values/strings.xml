@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">FinanceCalcApp</string>
+
+    <!-- 你的个人信息 -->
+    <string name="my_info">姓名：张三   学号：20230001</string>
+
+    <!-- 主界面文字 -->
+    <string name="label_principal">请输入理财本金 (元)：</string>
+    <string name="hint_principal">例如：10000</string>
+    <string name="label_risk">请选择风险偏好：</string>
+    <string name="rb_low">稳健型(3%)</string>
+    <string name="rb_mid">平衡型(5%)</string>
+    <string name="rb_high">进取型(8%)</string>
+    <string name="label_years">请选择投资期限：</string>
+    <string name="cb_compound">按复利计息（默认单利）</string>
+    <string name="btn_calc">开始计算收益</string>
+    <string name="toast_empty">请输入本金</string>
+
+    <!-- 结果界面文字 -->
+    <string name="label_detail">收益明细推演：</string>
+    <string name="btn_back">返回</string>
+</resources>
